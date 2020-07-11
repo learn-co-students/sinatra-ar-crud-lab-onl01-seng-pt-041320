@@ -1,7 +1,14 @@
-<form method = "POST" action = "/articles">
-  <h3>Article Title: <input type="text" name="title"></h3>
-  <h3>Article Content:</h3>
-  <textarea name="content" rows="20" cols="50"></textarea><br>
-  <p></p>
-  <input type="submit" value="Submit">
+<form action="/articles" method="post">
+  <ul>
+    <li>
+      <label for="title">Title</label>
+      <input id="title" type="text" name="title" />
+    </li>
+    <li>
+      <label for="content">Content</label>
+      <textarea id="content" type="text" name="content">
+      </textarea>
+    </li>
+  </ul>
+  <input type="submit" />
 </form>
