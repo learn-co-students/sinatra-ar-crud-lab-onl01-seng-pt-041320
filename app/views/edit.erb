@@ -1,0 +1,9 @@
+<!-- This is the edit page for articles-->
+<form method='POST' action='/articles/<%= @article_to_edit.id %>'>
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+        <label for='title'>Title: </label><br />
+        <input type='text' name='title' value='<%= @article_to_edit.title %>'><br />
+        <label for='content'>Content: </label><br />
+        <input type='text' name='content' value='<%= @article_to_edit.content %>'><br />
+    <input type="submit" value="Submit">
+</form>
