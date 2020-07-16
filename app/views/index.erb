@@ -1,0 +1,5 @@
+<!-- This is the index page; Should display all instances of Article -->
+<% @articles.each do |article| %>
+    <h2> <%= article.title %> </h2>
+    <p> <%= article.content %> </p>
+<% end %>

@@ -1,0 +1,7 @@
+<!-- This is the single article view page -->
+<form method='POST' action='/articles/<%= @article.id %>'>
+    <input id="hidden" type="hidden" name="_method" value="delete">
+        <h2> <%= @article.title %> </h2><br />
+        <p> <%= @article.content %> </p><br />
+    <input type="submit" value="Delete">
+</form>
