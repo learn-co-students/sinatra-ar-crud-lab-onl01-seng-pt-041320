@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
   end
-#--------------------------Read
+
   get '/articles' do
     @articles = Article.all 
 
@@ -27,13 +27,20 @@ class ApplicationController < Sinatra::Base
 
     erb :show
   end
-#-----------------------------Create
-  
 
   post '/articles' do 
     @new_article = Article.create(title: params[:title], content: params[:content])
 
     redirect "articles/#{@new_article.id}"
+  end
+
+  get '/articles/:id/edit' do 
+
+    erb :edit
+  end
+
+  patch '/articles/:id' do 
+    
   end
 
 
