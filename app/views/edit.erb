@@ -1,12 +1,12 @@
 
-<form action="/articles" method="post">
+<form action="/articles/<%=@article.id%>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
     <label for="title">Article Title: </label>
-    <input id="title" type="text" name="title"><br>
+    <input id="title" type="text" name="title" value="<%=@article.title%>" ><br>
 
     <label for="content">Article Content: </label>
-    <input id="content" type="text" name="content"><br>
+    <input id="content" type="text" name="content" value="<%=@article.content%>"><br>
 
-    <input id="hidden" type="hidden" name="_method" value="PATCH">
 
     <input id="submit" type="submit">
 
