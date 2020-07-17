@@ -11,12 +11,12 @@ class ApplicationController < Sinatra::Base
   #Read 
 
   get '/articles' do
-    @article = Article.all
+    @articles = Article.all
     erb :index
   end
 
   get '/articles/:id' do 
-    #@article = Article.find(params[:id])
+    @article = Article.find(params[:id])
     erb :show
   end
 
