@@ -10,6 +10,9 @@ class ApplicationController < Sinatra::Base
 
   #Read 
 
+  get '/' do 
+  end
+
   get '/articles' do
     @articles = Article.all
     erb :index
