@@ -48,10 +48,17 @@ class ApplicationController < Sinatra::Base
     new_params[:content] = params[:content]
 
     orig.update(new_params)
-    
+
     redirect '/articles/#{id}'
   end
 
+  #Delete
+
+  delete '/articles/:id' do 
+    @article = Article.delete(params[:id])
+
+    redirect '/articles'
+  end
 
 
 end
