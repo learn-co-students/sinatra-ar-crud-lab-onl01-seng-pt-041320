@@ -11,7 +11,6 @@ class ApplicationController < Sinatra::Base
   get '/' do
   end
 
-
   get '/articles' do
     @articles = Article.all
     erb :index
@@ -27,6 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
 
+
   get '/articles/:id' do
     @article = Article.find(params[:id])
     erb :show
@@ -34,13 +34,13 @@ class ApplicationController < Sinatra::Base
 
 
 
-  get 'articles/:id/edit' do
+  get '/articles/:id/edit' do
     @article = Article.find(params[:id])
     erb :edit
   end
 
 
-  patch 'articles/:id' do
+  patch '/articles/:id' do
     @article = Article.find(params[:id])
     @article.title = params[:title]
     @article.content = params[:content]
@@ -56,4 +56,5 @@ class ApplicationController < Sinatra::Base
   end
 
 
+  
 end
