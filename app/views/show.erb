@@ -1,0 +1,11 @@
+#<form action="/articles" method="post">
+#<label for="task">New Article:</label>
+#<input type="text" name=
+<%= @article.title %>
+<%= @article.content %>
+
+<form method="post" action="/articles/<%= @article.id %>">
+<input id="hidden" type="hidden" name="_method" value="DELETE">
+<input type="submit" value="delete">
+</form>
+
